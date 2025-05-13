@@ -32,14 +32,14 @@ Current release info
 Installing azure-mgmt-sqlvirtualmachine
 =======================================
 
-Installing `azure-mgmt-sqlvirtualmachine` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `azure-mgmt-sqlvirtualmachine` from the `conda-forge/label/azure-mgmt-sqlvirtualmachine_rc` channel can be achieved by adding `conda-forge/label/azure-mgmt-sqlvirtualmachine_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/azure-mgmt-sqlvirtualmachine_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `azure-mgmt-sqlvirtualmachine` can be installed with `conda`:
+Once the `conda-forge/label/azure-mgmt-sqlvirtualmachine_rc` channel has been enabled, `azure-mgmt-sqlvirtualmachine` can be installed with `conda`:
 
 ```
 conda install azure-mgmt-sqlvirtualmachine
@@ -54,26 +54,26 @@ mamba install azure-mgmt-sqlvirtualmachine
 It is possible to list all of the versions of `azure-mgmt-sqlvirtualmachine` available on your platform with `conda`:
 
 ```
-conda search azure-mgmt-sqlvirtualmachine --channel conda-forge
+conda search azure-mgmt-sqlvirtualmachine --channel conda-forge/label/azure-mgmt-sqlvirtualmachine_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search azure-mgmt-sqlvirtualmachine --channel conda-forge
+mamba search azure-mgmt-sqlvirtualmachine --channel conda-forge/label/azure-mgmt-sqlvirtualmachine_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search azure-mgmt-sqlvirtualmachine --channel conda-forge
+mamba repoquery search azure-mgmt-sqlvirtualmachine --channel conda-forge/label/azure-mgmt-sqlvirtualmachine_rc
 
 # List packages depending on `azure-mgmt-sqlvirtualmachine`:
-mamba repoquery whoneeds azure-mgmt-sqlvirtualmachine --channel conda-forge
+mamba repoquery whoneeds azure-mgmt-sqlvirtualmachine --channel conda-forge/label/azure-mgmt-sqlvirtualmachine_rc
 
 # List dependencies of `azure-mgmt-sqlvirtualmachine`:
-mamba repoquery depends azure-mgmt-sqlvirtualmachine --channel conda-forge
+mamba repoquery depends azure-mgmt-sqlvirtualmachine --channel conda-forge/label/azure-mgmt-sqlvirtualmachine_rc
 ```
 
 
