@@ -24,9 +24,9 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - msrest >=0.5.0
-    - msrestazure >=0.4.32,<2.0.0
-    - azure-common >=1.1,<2.dev0
+    - isodate >=0.6.1
+    - azure-mgmt-core >=1.6.0
+    - typing-extensions >=4.6.0
 
 tests:
   - python:
