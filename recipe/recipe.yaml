@@ -2,15 +2,15 @@ schema_version: 1
 
 context:
   name: azure-mgmt-sqlvirtualmachine
-  version: 0.5.0
+  version: "1.0.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/azure-mgmt-sqlvirtualmachine-${{ version }}.zip
-  sha256: b5a9423512a7b12844ac014366a1d53c81017a14f39676beedf004a532aa2aad
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: a1830b37467de86e7bdf739ea8550f5d2030ebd47e3b408d621a2397cc74d915
 
 build:
   number: 0
@@ -24,9 +24,9 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - msrest >=0.5.0
-    - msrestazure >=0.4.32,<2.0.0
-    - azure-common >=1.1,<2.dev0
+    - isodate >=0.6.1
+    - azure-mgmt-core >=1.6.0
+    - typing-extensions >=4.6.0
 
 tests:
   - python:
@@ -34,7 +34,9 @@ tests:
         - azure.mgmt.sqlvirtualmachine
         - azure.mgmt.sqlvirtualmachine.models
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Microsoft Azure SQL Virtual Machine Management Client Library for Python
